@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-    int x,y,sum,sub,mul,div;
+    int x,y,sum,sub,mul,rem;
     printf("enter the value of x");
     scanf("%d",&x);
     printf("enter the value of y");
@@ -8,10 +8,10 @@ int main(){
     sum=x+y;
     sub=x-y;
     mul=x*y;
-    div=x/y;
+    rem=x/y;
 printf("addition=%d\n",sum);
 printf("subtraction=%d\n",sub);
 printf("multiplication=%d\n",mul);
-printf("division=%d\n",div);
+printf("remainder=%d\n",rem);
     return 0;
 }

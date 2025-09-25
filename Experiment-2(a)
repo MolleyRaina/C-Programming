@@ -8,7 +8,7 @@ int main(){
     sum=x+y;
     sub=x-y;
     mul=x*y;
-    rem=x/y;
+    rem=x%y;
 printf("addition=%d\n",sum);
 printf("subtraction=%d\n",sub);
 printf("multiplication=%d\n",mul);

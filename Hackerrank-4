@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+  int r,a,l,w;
+    scanf("%d %d %d %d",&r,&a,&l,&w);
+    float a0,p0,a1,p1,a2,p2;
+    const float pi=3.1416;
+    a0=pi*r*r;
+    p0=2*pi*r;
+    a1=a*a;
+    p1=4*a;
+    a2=l*w;
+    p2=2*(l+w);
+    printf("Circle: %.2f %.2f\nSquare: %.2f %.2f\nRectangle: %.2f %.2f",a0,p0,a1,p1,a2,p2);
+    return 0;
+}

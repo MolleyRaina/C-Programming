@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    char S[1001];
+    int count[256] = {0}; 
+    int maxCount = 0;
+    char maxChar = '\0'; 
+    if (fgets(S, sizeof(S), stdin) != NULL) {
+        S[strcspn(S, "\n")] = 0;
+        for (int i = 0; S[i] != '\0'; i++) {
+            count[(unsigned char)S[i]]++;
+        }
+        for (int i = 0; S[i] != '\0'; i++) {
+            if (count[(unsigned char)S[i]] > maxCount) {
+                maxCount = count[(unsigned char)S[i]];
+                maxChar = S[i];
+            }
+        }
+        if (maxChar == '\0' && strlen(S) > 0) {
+            maxChar = S[0];
+            maxCount = 1;
+        }
+    }
+    printf("%c occurs %d times\n", maxChar, maxCount);
+    return 0;
+}
